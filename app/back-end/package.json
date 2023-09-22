@@ -1,0 +1,19 @@
+{
+  "name": "desafio-uTech",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "author": "Ulisses Silvério / Odisseu93 <contato@ulisses.tec.br> (https://www.ulisses.tec.br)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server",
+    "dev": "nodemon src/server"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
