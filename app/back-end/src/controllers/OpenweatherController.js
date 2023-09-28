@@ -6,9 +6,21 @@ export class OpenweatherController {
 	static async getListWeatherForecasts(req, res) {
 		try {
 			const json = await fetchWeatherApi()
+
 			if (json) {
-				return res.status(200).json(json.list)
-			}
+				if(json.list.length === 0) return res.status(200).json({
+					list: []
+				})
+				
+				return res
+					.status(200)
+					.json({
+						list: json.list,
+						media:
+							json.list
+								.map(({ main }) => Number(main.temp))
+								.reduce((a, b) => a + b, 0) / json.list.length
+					})}
 		} catch (err) {
 			res.status(500).json({ message: err })
 		}
