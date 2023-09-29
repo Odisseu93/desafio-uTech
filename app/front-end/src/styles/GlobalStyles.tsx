@@ -14,6 +14,7 @@ export const GlobalsStyles = createGlobalStyle`
 }
 
 html {
+  background-color: #F1EFEF;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
