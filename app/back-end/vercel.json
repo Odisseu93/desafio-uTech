@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "desafio-utech",
+  "github": {
+    "enabled": false
+  },
   "builds": [
     {
       "src": "src/server.js",
