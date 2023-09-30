@@ -12,8 +12,10 @@ function App() {
 	
 	const getApiData = async () =>  {
 		try {
+			const url = import.meta.env.VITE_URL || 'https://localhost:8080/api/';
+
 			const weatherList = ss.get('weatherList') ||
-			await (await fetch('http://localhost:8080/api/')).json();
+			await (await fetch(url)).json();
 
 			if(weatherList) {
 				ss.set('weatherList', weatherList);
