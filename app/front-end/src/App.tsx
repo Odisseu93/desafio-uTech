@@ -19,6 +19,7 @@ function App() {
 
 			if(weatherList) {
 				ss.set('weatherList', weatherList);
+
 				setAllWeatherForecasts(weatherList);
 			}
 		
@@ -39,7 +40,7 @@ function App() {
 
 				<ul>
 					{
-						allWeatherForecasts ? 
+						allWeatherForecasts && allWeatherForecasts.list ? 
 						
 							allWeatherForecasts.list.length === 0 && 'Nenhuma previsão foi encontrada!' ||
 
@@ -58,7 +59,7 @@ function App() {
 					}
 				</ul>
 
-				{allWeatherForecasts && <h2>Média: <span className='media'>{allWeatherForecasts.media.toFixed(2)}º</span></h2>}
+				{allWeatherForecasts && allWeatherForecasts.media && <h2>Média: <span className='media'>{allWeatherForecasts.media.toFixed(2)}º</span></h2>}
 			</C.App>
 
 			<Footer/>
