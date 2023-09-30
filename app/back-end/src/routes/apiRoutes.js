@@ -1,9 +1,9 @@
 import express from 'express';
-import { OpenweatherController } from "../controllers/OpenweatherController.js";
+import {  OpenWeatherApiController } from "../controllers/OpenWeatherApiController.js";
 
 const router = express.Router();
 
-router.get('/', OpenweatherController.getListWeatherForecasts);
+router.get('/', OpenWeatherApiController.getListWeatherForecasts);
 
 
 export default router;

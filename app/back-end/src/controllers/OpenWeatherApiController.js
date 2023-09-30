@@ -2,7 +2,7 @@ const fetchWeatherApi = async () => {
 	return (await fetch('http://localhost:8080/mock/api.json')).json()
 }
 
-export class OpenweatherController {
+export class OpenWeatherApiController {
 	static async getListWeatherForecasts(req, res) {
 		try {
 			const json = await fetchWeatherApi()
