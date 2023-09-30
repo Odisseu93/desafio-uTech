@@ -34,3 +34,73 @@ Responsiva;
 
     Para acessar os endpoints da API fornecida é necessário um cadastro no site https://rapidapi.com. O botão para inscrição é encontrado em qualquer página do site, no canto superior direito. É possível realizar cadastros rápidos através das contas do GitHub, Google, Facebook, ou fornecer os dados manualmente para um novo cadastro.
     Após efetivar o registro, é possível testar os endpoints da API dentro da plataforma. A API utilizada para realização dos testes é totalmente gratuita, então basta se inscrever para ter acesso. Além da documentação dos campos e possíveis URLs, a página fornece exemplos de como adicionar os cabeçalhos necessários para realizar as requisições em diversas linguagens de programação. Utilize o cabeçalho com a chave fornecida pelo site em sua aplicação. 
+
+
+## Variáveis de ambiente
+**Back-end**
+```bash
+APPID=''
+KEY=''
+HOST=''
+```
+_variáveis obitidas em https://rapidapi.com/KirylBokiy/api/openweather43/_
+
+**front-end**
+```bash
+# PRODUÇÃO
+VITE_URL=''
+```
+    
+## Executando localmente
+
+para rodar os projeto, siga os passo abaixo:
+
+
+1. Clone o repositório do projeto:
+
+   ```bash
+   git clone https://github.com/Odisseu93/teste-frontend-bugaboo
+   ```
+
+**Back-end**
+
+2. navege até a pasta do aonde está os aquivos do back-end:
+
+   ```bash
+   cd app/back-end
+   ```
+
+3. Instale todas as dependencias:
+
+   ```bash
+   yarn install
+   ```
+
+4. Inicie o development server:
+
+   ```bash
+   yarn dev
+   ```
+
+**Front-end**
+
+2. navege até a pasta do aonde está os aquivos do back-end:
+
+   ```bash
+   cd app/front-end
+   ```
+
+3. Instale todas as dependencias:
+
+   ```bash
+   yarn install
+   ```
+
+4. Inicie o development server:
+
+   ```bash
+   yarn dev
+   ```
+
+## Preview
+[Site](https://desafio-u-tech-frontend.vercel.app/)
