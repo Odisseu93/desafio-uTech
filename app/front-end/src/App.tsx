@@ -5,15 +5,20 @@ import Footer from './components/Footer';
 import { dateFormat } from './utils/dateFormat';
 import { WeatherForecastList } from './types/WeatherForecastList';
 import { toast } from './libs';
+import { ss } from './utils/sessionStorage';
 
 function App() {
 	const [allWeatherForecasts,  setAllWeatherForecasts] = useState<null | WeatherForecastList>(null);
 	
 	const getApiData = async () =>  {
 		try {
-			const weatherList = await (await fetch('http://localhost:8080/api/')).json();
+			const weatherList = ss.get('weatherList') ||
+			await (await fetch('http://localhost:8080/api/')).json();
 
-			if(weatherList) setAllWeatherForecasts(weatherList); 
+			if(weatherList) {
+				ss.set('weatherList', weatherList);
+				setAllWeatherForecasts(weatherList);
+			}
 		
 		} catch(err) {
 			toast.error('Aconteceu algum erro ao buscar os dados!');
